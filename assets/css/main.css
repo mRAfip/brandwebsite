@@ -35,6 +35,8 @@
   }
 
 
+
+
 a {
 	color: currentColor;
 	text-decoration: none;
@@ -96,6 +98,7 @@ p a:focus {
     animation: none;
     width: 100%;
     height: auto;
+    font-size: 0.9rem !important;
 
   }
 
@@ -126,6 +129,7 @@ p a:focus {
     .top-bar-2nd {
         font-size: 0.9rem;
         background-color: var(--gray-bg);
+
     
     }
     
@@ -135,6 +139,8 @@ p a:focus {
 
     .top-ba-text{
          color: var(--gray-text);
+         font-size: 0.9rem !important;
+
     }
 
 
@@ -371,3 +377,48 @@ p a:focus {
 
       
   }
+
+
+
+  /* hero sectio */
+
+
+  .hero-section{
+
+    height: 80vh;
+
+  }
+
+  .video-card{
+
+    height: 60vh;
+    border: none !important;
+
+  }
+
+  .header-text{
+
+    color: var(--black);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 200 !important;
+
+
+  }
+
+
+  
+#dynamic-text{
+
+  /* background-image: linear-gradient(45deg, #0056b3, #00E1FF); 
+  -webkit-background-clip: text; 
+  color: transparent;  */
+  color: #0000FF;
+
+  
+
+
+}
+
+
+
+

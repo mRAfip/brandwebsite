@@ -31,6 +31,10 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
       
 
+                <!-- font -->
+                <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
                 <!-- Link to flat icon CDN -->
 
                 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
@@ -224,9 +228,73 @@
   </nav>
 
 
+
+
+  <!-- hero  -->
+
+
+  <section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <h1 class="display-4 fw-bold header-text">Be the next<br><span id="dynamic-text">Big thing</span></h1>
+
+                <p class="lead text-muted">Discover my work, skills, and projects that showcase my creativity and expertise.</p>
+                <div class="mt-4">
+                    <a href="#contact" class="btn btn-primary me-2">Contact</a>
+                    <a href="#work" class="btn btn-outline-secondary">View Work</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+             
+          </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+              <video autoplay muted loop class="w-100" style="pointer-events: none;">
+                <source src="./assets/img/video/banner.webm" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
  </main>
 
  
+
+
+ <!-- script for dynamic text -->
+
+ <script>
+
+
+    const words = ["Sale mechine", "Globlal empire", "Product brand"];
+    let currentIndex = 0;
+
+    function changeWord() {
+        const textElement = document.getElementById("dynamic-text");
+
+        // Remove the typing class to reset the effect
+        textElement.classList.remove("typing");
+
+        // Wait a moment before changing the word
+        setTimeout(() => {
+            textElement.textContent = words[currentIndex];
+            textElement.classList.add("typing"); // Add the typing animation
+
+            currentIndex = (currentIndex + 1) % words.length; // loop back to the first word after the last one
+        }, 500); // Slight delay before changing the word to avoid too fast animation
+    }
+
+    // Change the word every 4 seconds (2 seconds for typing effect)
+    setInterval(changeWord, 2000);
+
+
+ </script>
 
 
     <!-- bootstrap -->
