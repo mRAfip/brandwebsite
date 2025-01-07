@@ -1,0 +1,364 @@
+
+
+/* --------------------------------------------------------------------
+* Master Stylesheet
+* 
+* Author:		madman
+*
+*
+* Body Font (global): 'Inter', sans-serif;
+
+-------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------- *
+ * Global variables
+/* ------------------------------------------------------------- */
+
+:root{
+
+    --white: #fff;
+    --black: #000;
+    --gray-bg :#F9F9F9;
+    --primary:#0000FF;
+    --gray-text:#3f3f4b;
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter' !important;
+  }
+
+
+a {
+	color: currentColor;
+	text-decoration: none;
+	outline: none
+}
+.gray_a {
+    color: #6e6e6e;
+}
+a:hover, a:focus {
+	color: currentColor;
+}
+p a { 
+	color: currentColor;
+	opacity: .8;
+	font-style: italic;
+	border-bottom: 1px solid;
+}
+p a:hover,
+p a:focus { 
+	color: currentColor;
+	opacity: .6;
+}
+
+.p-large{
+
+    font-size: 1.25rem;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+/* ================ end global section ================ */
+
+
+
+
+/* start top bar */
+
+.top-bar {
+    background-color: var(--primary);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    height: fit-content;
+    padding: 5px 0;
+ 
+   
+  }
+
+  .top-bar__content {
+    text-align: center;
+    display: inline-block;
+    animation: none;
+    width: 100%;
+    height: auto;
+
+  }
+
+
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .top-bar__content {
+      display: inline-block;
+      animation: slide 10s linear infinite;
+    }
+  }
+
+
+
+
+  /* 2 nd top bar */
+
+
+    .top-bar-2nd {
+        font-size: 0.9rem;
+        background-color: var(--gray-bg);
+    
+    }
+    
+    .top-bar-2nd img {
+        vertical-align: middle;
+    }
+
+    .top-ba-text{
+         color: var(--gray-text);
+    }
+
+
+
+
+  /* navbar */
+
+  /* Custom Styles */
+  .dropdown {
+    position: static !important;
+}
+
+
+
+  .btn-head{
+
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1% 2%;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  
+
+
+
+
+  .custom-dropdown-menu {
+    width: 100vw; /* Full width of the viewport */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    position: absolute; /* Ensure positioning below the menu */
+    top: 100%; /* Position dropdown below the nav */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 1rem 0; /* Spacing around the dropdown content */
+    border: none; /* Remove default border */
+    z-index: 1050; /* Ensure visibility */
+  }
+
+  .menu-colum{
+
+    padding-left: 13px;
+    border-right: solid 1px #e6e6e6;
+    text-align: left;
+  }
+
+  .no-border{
+
+    border: none !important;
+  }
+  
+  /* Dropdown Columns */
+  .custom-dropdown-menu .col-md-4 {
+    padding: 1rem; /* Add spacing between columns */
+  }
+  
+  /* Image Styling */
+  .custom-dropdown-menu img {
+    max-width: 100%; /* Limit image size */
+    margin: 0 auto; /* Center images */
+    display: block; /* Block layout for alignment */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+  }
+
+  
+  /* Title Styling */
+  .dropdown-item-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 20px !important;
+    
+    font-weight: 600;
+
+
+  }
+
+  .dropdown-item-title:hover{
+
+    color: var(--primary);
+  }
+  
+  /* List Styling */
+  .custom-dropdown-menu ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-dropdown-menu ul li {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.2rem 0;
+    
+  }
+
+  .icon{
+
+    margin-right: 20px;
+    color: var(--primary);
+
+  }
+
+  .arrow-next{
+
+    font-size: .75rem;
+    margin-left: 5px;
+  }
+
+  
+
+  
+  .custom-dropdown-menu ul li:hover {
+    color:var(--primary); /* Highlight on hover */
+  }
+
+
+
+
+/* General styles for the toggle button */
+.navbar-toggler {
+    border: none !important; /* Remove border */
+    outline: none !important; /* Remove focus outline */
+    box-shadow: none !important; /* Remove any shadow */
+    background-color: transparent; /* Ensure transparent background */
+    padding: 0.5rem; /* Add some padding for better click area */
+    transition: all 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Style the hamburger icon */
+  .navbar-toggler .navbar-toggler-icon {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: #000; /* Default bar color */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Top and bottom bars */
+  .navbar-toggler .navbar-toggler-icon::before,
+  .navbar-toggler .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #000; /* Default bar color */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .navbar-toggler .navbar-toggler-icon::before {
+    top: -8px; /* Position the top bar */
+  }
+  
+  .navbar-toggler .navbar-toggler-icon::after {
+    top: 8px; /* Position the bottom bar */
+  }
+
+
+  
+  /* Handle the expanded state */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent!important; /* Hide the middle bar */
+    
+  }
+
+    /* When the menu is open (toggle button expanded) */
+.navbar-toggler[aria-expanded="true"] ~ .navbar-collapse .navbar-nav{
+    
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+
+
+  /* When the menu is open (toggle button expanded) */
+.navbar-toggler[aria-expanded="true"] ~ .navbar-collapse .nav-link {
+    font-size: 1.5rem; /* Increase font size */
+    text-align: left;
+    
+
+  }
+  
+  /* Optional: Hover effect for consistency */
+  .navbar-toggler[aria-expanded="true"] ~ .navbar-collapse .nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+
+
+
+
+
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .custom-dropdown-menu {
+      position: static; /* Stack menu for mobile */
+      width: 100%; /* Ensure full width */
+
+      
+    }
+    .custom-dropdown-menu .col-md-4 {
+      margin-bottom: 1rem; /* Add spacing between columns */
+    }
+
+    .custom-dropdown-menu ul li {
+        text-align: left !important;
+      }
+
+
+      .btn-head{
+
+        background-color: var(--primary);
+        color: var(--white);
+        padding: 4% 6% !important;
+        border-radius: 30px;
+        width: 100vw !important;
+        text-decoration: none;
+      }
+
+   
+
+      
+  }
