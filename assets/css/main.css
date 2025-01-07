@@ -156,6 +156,7 @@ p a:focus {
     padding: 1% 2%;
     border-radius: 30px;
     text-decoration: none;
+    width: fit-content !important;
   }
   
 
@@ -350,14 +351,22 @@ p a:focus {
 
       .btn-head{
 
-        background-color: var(--primary);
+        /* background-color: var(--primary);
         color: var(--white);
         padding: 4% 6% !important;
         border-radius: 30px;
         width: 100vw !important;
-        text-decoration: none;
+        text-decoration: none; */
+
+        visibility: hidden;
       }
 
+      .mobile-propsal-btn{
+
+        color: #0000FF;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
    
 
       
