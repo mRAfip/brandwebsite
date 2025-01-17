@@ -1,0 +1,54 @@
+
+:root{
+
+    --white: #fff;
+    --black: #000;
+    --gray-bg :#F9F9F9;
+    --primary:#041BBF;
+    --gray-text:#3f3f4b;
+    --dark-bg: #041BBF;
+
+
+}
+
+
+.contact-hero{
+    color: var(--white) !important;
+    background-color: #041BBF;
+    height: auto !important;
+   
+}
+
+.hero-section p{
+
+    color: #a3a3ff !important;
+}
+
+.contact-form{
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color: var(--white);
+    color: #000;
+}
+
+.form-label{
+
+    font-size: 0.9rem !important;
+    opacity: 0.75;
+}
+
+.form-control{
+    height: 50px;
+}
+.form-select{
+
+    height: 50px; 
+}
+
+.primary-btn{
+
+    border: none !important;
+}
