@@ -1,0 +1,147 @@
+:root{
+
+    --white: #fff;
+    --black: #000;
+    --gray-bg :#F9F9F9;
+    --primary:#041BBF;
+    --gray-text:#3f3f4b;
+    --dark-bg: #041BBF;
+
+
+}
+
+
+
+
+
+.large-txt{
+
+    font-size: 3.5rem;
+    font-weight: 600;
+    
+}
+
+@media (max-width: 768px) {
+
+    .large-txt{
+
+        font-size: 2rem;
+        font-weight: 600;
+        width: 100%;
+    }
+}
+
+.banner-img{
+
+    width: 450px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+.value-item {
+
+
+    padding: 5% 0;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.border-left {
+
+    border-top: solid 1px #bbbbbb;
+    border-right: solid 1px #bbbbbb;
+
+}
+
+.border-right {
+
+   
+    border-top: solid 1px #bbbbbb;
+}
+
+.border-bottom {
+
+   
+    border-bottom: solid 1px #bbbbbb;
+}
+
+
+
+.content-value{
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content-value a {
+
+color: var(--black) ;
+text-decoration: none;
+
+
+}
+
+.content-value i {
+    margin-right: 15px;
+    
+}
+
+.content-value p {
+
+
+    color: var(--gray-text);
+    margin-top: 10px;
+    
+    
+}
+
+
+
+/* benefits */
+
+
+.benfits-row{
+
+    display: flex;
+    gap: 10px;
+   
+}
+
+
+@media (max-width: 768px) {
+
+    .benfits-row{
+
+       flex-direction: column;
+       
+    }
+    
+}
+
+
+
+.benefits-bg{
+
+    background-color: #F7F6F5;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
