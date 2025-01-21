@@ -1,13 +1,172 @@
-.top-bar-2nd{
+:root{
+
+    --white: #fff;
+    --black: #000;
+    --gray-bg :#F9F9F9;
+    --primary:#041BBF;
+    --gray-text:#3f3f4b;
+    --dark-bg: #041BBF;
+    --bg-orange: #FF6700;
+
+
+}
+
+/* .top-bar-2nd{
 
     background-color: #FF761A !important;
-
 }
 
 .navbar{
+    background-color: var(--bg-orange) !important;
+} */
 
-    background-color: #FF6700;
+.hero-section{
+
+    
+    height: fit-content;
+    background-image: url(../img/banners/web-bannner.avif);
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding-top: 150px;
+    padding-bottom: 100px;
+
 }
-.top-ba-text{
-    color: #fff !important;
+
+
+.large-txt{
+
+    font-size: 3.5rem;
+    font-weight: 600;
+    
 }
+
+
+.clients-section{
+
+    margin-top: 50px;
+}
+
+
+.banner-web{
+
+
+    border-radius: 20px;
+
+
+}
+
+.Client_logo{
+
+    height: 20px !important;
+}
+
+
+
+/* start work */
+
+
+.portflio-work{
+
+    padding: 200px 0;
+    background-color: #fff !important;
+}
+
+/* Individual Cards */
+.work-card {
+    position: relative;
+    flex: 1 0 auto; /* Allows card to adjust width based on container */
+
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 4 - 10px); /* Show 4 cards per screen width */
+    background-color: #F7F7F7;
+  
+  }
+
+  .work-card img {
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+
+  .work-card img:hover {
+
+    transform: scale(1.05); /* Zoom the image by 20% */
+
+  }
+
+  .work-card .content{
+
+    display: flex;
+    height: 100px;
+    justify-content: left;
+    padding-top: 5%;
+    padding-left: 10%;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+
+
+
+
+  /* main service section */
+
+
+  /* main-services Cards */
+
+
+
+.main-service-card {
+    position: relative;
+    flex: 1 0 auto; /* Allows card to adjust width based on container */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:100%; 
+    background-color: #F7F7F7;
+  
+  }
+
+  .main-service-card img {
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+
+  .main-service-card img:hover {
+
+    transform: scale(1.05); /* Zoom the image by 20% */
+
+  }
+
+  .main-service-card .content{
+
+    display: flex;
+
+    justify-content: left;
+   padding: 5% 10%;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  .main-service-card .content p {
+
+    opacity: 0.7;
+  }

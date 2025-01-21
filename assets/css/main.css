@@ -94,6 +94,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
+.large-txt{
+
+  font-size: 3.5rem;
+  font-weight: 600;
+  
+}
+
+
 .primary-btn{
 
   background-color: var(--primary);
@@ -569,6 +577,102 @@ h1,h2,h3,h4,h5,h6{
 /* ================== end clientlist ============= */
 
 
+
+
+/* compaany stats details */
+
+
+.stats{
+
+  height: 25vh;
+
+  width: 100%;
+  margin-top: 100px;
+  
+}
+
+.stats-content {
+
+  border-top: solid 1px #cfcfcf;
+}
+
+.review{
+
+  display: flex;
+  padding: 30px 0;
+  gap: 15px;
+ 
+}
+
+.logo-review{
+
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-review p {
+
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 0.80rem;
+  margin-bottom: 0 !important;
+
+}
+
+.logo-review img{
+
+  height: 24px;
+}
+
+
+.logo-review .stars{
+
+  display: flex;
+  color: #FF3D2E;
+ 
+
+}
+
+/* .right-border{
+
+  border-right: solid 1px #000;
+
+} */
+
+
+
+.stars-google {
+  display: flex;
+  color: #FBB20C;
+}
+
+
+.stats-item{
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  padding-left: 20px !important;
+ 
+}
+
+.stats-item h3 {
+
+  font-weight: 600;
+}
+
+.stats-item span{
+
+  font-weight: 200 !important;
+  font-size: 1rem;
+}
+
+
+
+
+
 /* start service section */
 
 
@@ -728,7 +832,7 @@ padding: 0 10%;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   display: inline-block;
   width: calc(100% / 2.5 - 10px); /* Show 4 cards per screen width */
   
@@ -795,48 +899,88 @@ padding: 0 10%;
 
 /* cta section */
 
-.cta_section{
 
-padding-top: 10%;
-padding-bottom: 5%;
-}
 
-.cta-head{
+.cta{
 
-  color: var(--white);
-  font-size: 4rem;
-
+  padding: 150px 0;
   
 }
 
+.cta .content{
+
+  border: solid 1px #d1d1d1;
+  border-radius: 10px;
 
 
-.stats-container {
-  display: flex; 
-  justify-content: flex-end;
-  height: fit-content;
+
+}
+
+.cta-top{
+
+  height: 30vh;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--dark-bg);
+  width: 100% !important;
+  display: flex;
+  align-items: end;
   color: var(--white);
-  gap: 5vw;
-  bottom: 0;
-
-}
-
-.cta-div{
-
-  background-color: var(--white);
-  height: 350px;
-  border-radius: 20px;
-  margin-top: 60px;
-}
-
-.stat-digit{
-
-  font-size: 5rem;
+  padding: 20px 40px;
 }
 
 
+.cta-top-text{
 
-/* footer */
+  font-size: 3rem;
+
+ 
+}
+
+.cta-bottom{
+ 
+  padding: 40px 40px;
+  display: flex;
+
+
+}
+
+.cta-bottom p{
+ 
+  font-size: 1.3rem;
+
+}
+
+.cta-benefits-items{
+
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.cta-bottom-left{
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.icon-cta{
+
+  margin-right: 20px;
+}
+
+.contact-form{
+
+  background-color: #fff;
+  border: solid 1px #f5f5f5;
+  border-radius: 10px;
+  margin-top: -35%;
+  box-shadow: 25px 25px 50px rgba(87, 87, 87, 0.1); /* Adding shadow */
+}
+
+
+/*-------------------------- footer ----------------------------------------*/
 
 
 footer{
@@ -893,6 +1037,8 @@ padding-bottom: 10px;
 .footer-bottom a:hover {
   color: #0d6efd;
 }
+
+
 
 
 
