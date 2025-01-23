@@ -110,6 +110,7 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 40px;
   text-decoration: none;
   width: fit-content;
+  border: none !important;
 }
 
 .primary-btn:hover{
@@ -471,6 +472,7 @@ h1,h2,h3,h4,h5,h6{
   .hero-section{
 
     height: 80vh;
+    padding: 5% 0;
 
   }
 
@@ -478,6 +480,13 @@ h1,h2,h3,h4,h5,h6{
 
     height: 60vh;
     border: none !important;
+
+  }
+
+  .video-banner{
+
+  
+    border-radius: 15px;
 
   }
 
@@ -502,10 +511,14 @@ h1,h2,h3,h4,h5,h6{
   
 #dynamic-text{
 
-  /* background-image: linear-gradient(45deg, #0056b3, #00E1FF); 
+  /* background-image: linear-gradient(45deg, #00c6ff, #0072ff); 
   -webkit-background-clip: text; 
   color: transparent;  */
   color: #0000FF;
+  font-family: 'AlmarenaNeueDisplay' !important; /* Name to reference the font */
+  font-weight: 600;
+
+  font-size: 4rem;
 
 
   
@@ -679,7 +692,7 @@ h1,h2,h3,h4,h5,h6{
 .head-service{
 
   text-align: center;
-  padding-top: 10% !important;
+
   height: auto;
   padding: 0 10%;
 

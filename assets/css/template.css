@@ -1,0 +1,107 @@
+
+
+:root{
+
+    --white: #fff;
+    --black: #000;
+    --gray-bg :#F9F9F9;
+    --primary:#041BBF;
+    --gray-text:#3f3f4b;
+    --dark-bg: #041BBF;
+
+
+}
+
+
+
+.hero-section {
+
+    height: auto !important;
+    padding: 100px 0 !important;
+    background-color: var(--black);
+    color: #fff;
+}
+
+
+
+
+#gallery{
+
+margin-top: 100px !important;
+}
+
+
+/* .filter-tab{
+
+    border-bottom: solid 1px #cacaca;
+
+} */
+
+
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    transition: transform 0.3s ease;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1); /* Zoom effect */
+    border-radius: 10px;
+  }
+
+  .gallery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px  20px;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-info {
+    opacity: 1; /* Show info on hover */
+  }
+
+  .filter-head{
+
+    margin-right: 40px !important;
+  }
+
+  .filter_btn{
+
+    text-decoration: none;
+    color: #494949;
+    margin-right: 40px;
+
+
+  }
+
+  .filter_btn:hover{
+
+    font-weight: 600;
+    color: var(--dark-bg);
+
+  }
+
+  .filter_btn:active{
+
+    background-color: transparent !important;
+  }
+
+    /* When the button is clicked or focused */
+    .filter_btn:active + .container,
+    .filter_btn:focus + .container {
+      background-color: rgba(0, 0, 0, 0) !important; /* Transparent background */
+    }
+
