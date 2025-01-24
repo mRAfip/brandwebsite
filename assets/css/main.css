@@ -715,6 +715,32 @@ h1,h2,h3,h4,h5,h6{
 
 
 
+@media (max-width: 768px) { 
+
+  .review{
+
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .stats-item{
+
+    text-align: center;
+  }
+
+
+  .stats{
+
+    margin-top: 50px;
+    
+  }
+
+
+}
+
+
+
 
 
 /* start service section */
