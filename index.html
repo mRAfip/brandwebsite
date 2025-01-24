@@ -13,7 +13,7 @@
               <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       
               <!-- Favicon (http://www.favicon-generator.org/) -->
-              <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+              <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
               <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
       
       
@@ -245,7 +245,7 @@
 
                 <p class="lead text-muted">We craft high-performing websites and e-commerce stores that drive growth for your business. </p>
                 <div style="margin-top: 40px;">
-                    <a href="#contact" class="primary-btn">Book call</a>
+                    <a href="#cta" class="primary-btn">Book call</a>
                     <a href="#work" class="secondary-btn">View Work</a>
                 </div>
             </div>
@@ -565,6 +565,7 @@
 
 
 
+            
 
 
 
@@ -582,7 +583,7 @@
 
   <!-- start section success stories -->
 
-<section class="container cta py-5">
+<section id="cta" class="container cta py-5">
 
   <div class="content">
 
@@ -828,59 +829,76 @@
 
   <script>
 
-    let current_Index = 0;
-    const cardsWrapper = document.querySelector('.cards-wrapper');
-    const totalCards = document.querySelectorAll('.story-card').length;
-    const maxVisibleCards = 1; // Limit the number of visible cards
-    let autoScrollInterval;
-    const scrollDelay = 10000; // 3 seconds
 
-    // Calculate card width based on the container and visible cards
-    function getCardWidth() {
-        const containerWidth = document.querySelector('.card-container').offsetWidth;
-        return containerWidth / maxVisibleCards; // Adjust card width dynamically
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  let currentIndex = 0;
+  const cardsWrapper = document.querySelector('.cards-wrapper');
+  const totalCards = document.querySelectorAll('.story-card').length;
+  const scrollDelay = 10000; // Auto-scroll delay in milliseconds
+  let maxVisibleCards = getMaxVisibleCards(); // Dynamically calculate visible cards
+  let cardWidth = getCardWidth(); // Calculate initial card width
+  let autoScrollInterval;
 
-    // Initial card width
-    let cardWidth = getCardWidth();
+  // Function to get max visible cards based on screen size
+  function getMaxVisibleCards() {
+    return window.innerWidth <= 768 ? 1 : 2; // 1 card for mobile, 2 cards for larger screens
+  }
 
-    // Function to update card position
-    function updateCardPosition() {
-        cardsWrapper.style.transform = `translateX(-${current_Index * cardWidth}px)`;
-    }
+  // Function to calculate card width
+  function getCardWidth() {
+    const containerWidth = document.querySelector('.card-container').offsetWidth;
+    return containerWidth / maxVisibleCards;
+  }
 
-    // Auto-scroll function
-    function autoScroll() {
-        autoScrollInterval = setInterval(() => {
-          current_Index = (current_Index + 1) % (totalCards - maxVisibleCards + 1); // Limit scroll range
-            updateCardPosition();
-        }, scrollDelay);
-    }
+  // Function to update card position
+  function updateCardPosition() {
+    cardsWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
 
-    // Start auto-scrolling on page load
-    autoScroll();
+  // Function to scroll to the next card
+  function scrollToNext() {
+    currentIndex = (currentIndex + 1) % (totalCards - maxVisibleCards + 1);
+    updateCardPosition();
+  }
 
-    // Next button functionality
-    document.getElementById('nextButton').addEventListener('click', () => {
-        clearInterval(autoScrollInterval); // Pause auto-scroll
-        current_Index = (current_Index + 1) % (totalCards - maxVisibleCards + 1); // Limit scroll range
-        updateCardPosition();
-        setTimeout(autoScroll, scrollDelay); // Resume auto-scroll after delay
-    });
+  // Function to scroll to the previous card
+  function scrollToPrev() {
+    currentIndex = (currentIndex - 1 + (totalCards - maxVisibleCards + 1)) % (totalCards - maxVisibleCards + 1);
+    updateCardPosition();
+  }
 
-    // Previous button functionality
-    document.getElementById('prevButton').addEventListener('click', () => {
-        clearInterval(autoScrollInterval); // Pause auto-scroll
-        current_Index = (current_Index - 1 + (totalCards - maxVisibleCards + 1)) % (totalCards - maxVisibleCards + 1); // Limit scroll range
-        updateCardPosition();
-        setTimeout(autoScroll, scrollDelay); // Resume auto-scroll after delay
-    });
+  // Auto-scroll function
+  function autoScroll() {
+    autoScrollInterval = setInterval(() => {
+      scrollToNext();
+    }, scrollDelay);
+  }
 
-    // Update card width and position on window resize
-    window.addEventListener('resize', () => {
-        cardWidth = getCardWidth(); // Recalculate card width
-        updateCardPosition(); // Update position based on new width
-    });
+  // Event listeners for navigation buttons
+  document.getElementById('nextButton').addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
+    scrollToNext();
+    setTimeout(autoScroll, scrollDelay); // Resume auto-scroll after delay
+  });
+
+  document.getElementById('prevButton').addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
+    scrollToPrev();
+    setTimeout(autoScroll, scrollDelay); // Resume auto-scroll after delay
+  });
+
+  // Update card width and visible cards on window resize
+  window.addEventListener('resize', () => {
+    maxVisibleCards = getMaxVisibleCards(); // Recalculate visible cards
+    cardWidth = getCardWidth(); // Recalculate card width
+    updateCardPosition();
+  });
+
+  // Start auto-scrolling
+  autoScroll();
+});
+
+
 </script>
 
 
