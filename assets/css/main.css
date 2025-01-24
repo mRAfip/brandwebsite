@@ -471,7 +471,6 @@ h1,h2,h3,h4,h5,h6{
 
   .hero-section{
 
-    height: 80vh;
     padding: 5% 0;
 
   }
@@ -483,10 +482,12 @@ h1,h2,h3,h4,h5,h6{
 
   }
 
-  .video-banner{
+  .hero-img{
 
   
     border-radius: 15px;
+    width: 100%;
+
 
   }
 
@@ -516,15 +517,45 @@ h1,h2,h3,h4,h5,h6{
   color: transparent;  */
   color: #0000FF;
   font-family: 'AlmarenaNeueDisplay' !important; /* Name to reference the font */
-  font-weight: 600;
+
 
   font-size: 4rem;
 
 
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero-section{
+    
+    text-align: center;
+    padding-top: 100px;
+
+  }
+
+
+  #dynamic-text{
+
+    font-size: 2.8rem;
   
+  }
+
+
+  .hero-img{
+
+  
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 50px;
+
+
+  }
 
 
 }
+
 
 
 
@@ -569,7 +600,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .ticker-item img {
-  height: 20px;
+  height: 50px;
   width: auto;
 }
 
@@ -597,7 +628,7 @@ h1,h2,h3,h4,h5,h6{
 
 .stats{
 
-  height: 25vh;
+
 
   width: 100%;
   margin-top: 100px;
@@ -714,6 +745,18 @@ padding: 0 10%;
 
 }
 
+.popular_clients{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.popular_clients p {
+
+  padding-right:10%;
+}
 
 
 .fill {
@@ -728,6 +771,7 @@ padding: 0 10%;
   display: inline-flex;
   align-items: center; /* Vertically center items */
   gap: 5px; /* Optional: Add space between the text and the icon */
+
 }
 
 
@@ -737,7 +781,11 @@ padding: 0 10%;
   border-radius: 10px;
   width: 100%;
   object-fit: cover;
+
 }
+
+
+
 
 .web-clients{
 
@@ -756,10 +804,10 @@ padding: 0 10%;
 }
 
 
-.gid-clients img {
+/* .gid-clients img {
 
-  height: 20px;
-}
+  height: 35px;
+} */
 
 .border-rt{
   
@@ -772,6 +820,47 @@ padding: 0 10%;
 
 
 
+
+
+@media (max-width: 768px) { 
+
+
+  .head-service{
+
+   
+    padding: 0 2%;
+  
+  
+  }
+
+  .head-service p {
+
+    padding: 0;
+  }
+
+  .popular_clients{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popular_clients p {
+
+    text-align: center !important;
+    display: flex;
+    flex-direction: column !important;
+    padding-right:0%;
+  }
+
+
+  .web-clients{
+
+    margin-top: 80px !important;
+  }
+
+}
 
 
 /* end service section */
@@ -788,7 +877,7 @@ padding: 0 10%;
 .story-section {
   width: 100%;
   padding: 7% 0;
-  background-color: #F6F8FC;
+  background-color: #fff;
   padding-top: 100px;
 }
 
@@ -820,7 +909,7 @@ padding: 0 10%;
   font-size: 18px;
   cursor: pointer;
   border-radius: 50px;
-  background-color: #F6F8FC;
+  background-color: #fff;
 }
 
 /* Card Container */
@@ -845,7 +934,7 @@ padding: 0 10%;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 10px;
-
+background-color: #f7f7f7;
   display: inline-block;
   width: calc(100% / 2.5 - 10px); /* Show 4 cards per screen width */
   
@@ -862,15 +951,32 @@ padding: 0 10%;
 
 }
 
+.text-crd{
 
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Vertically center items */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.text-crd p{
+  font-size: larger;
+  opacity: 0.75;
+}
+
+.text-crd .link{
+
+  color: #0000FF;
+}
 
 @media (max-width: 768px) { 
 
 
   .story-section {
       width: 100%;
-      padding: 20% 3%;
-      background-color: var(--black);
+     
+
   }
   
   .story-section-header {
@@ -881,9 +987,9 @@ padding: 0 10%;
   }
   
   .story-section-title {
-      font-size: 1rem;
+      font-size: 2rem;
       font-weight: 100;
-      color: #333333;
+
   }
 
   .control-button {
@@ -897,7 +1003,9 @@ padding: 0 10%;
       /* Individual Cards */
       .story-card {
         
-          height: 250px;
+          height: auto;
+          width: calc(100% / 1 - 10px); 
+
         
           
       
@@ -916,7 +1024,7 @@ padding: 0 10%;
 
 .cta{
 
-  padding: 150px 0;
+  /* padding: 150px 0; */
   
 }
 
@@ -993,6 +1101,29 @@ padding: 0 10%;
 }
 
 
+@media (max-width: 768px) { 
+ 
+
+  .cta-top-text{
+
+    font-size: 2rem;
+  
+   
+  }
+
+  .contact-form{
+
+    margin-top: 0;
+  }
+
+  .cta-benefits-items{
+
+    gap: 30px;
+  }
+
+}
+
+
 /*-------------------------- footer ----------------------------------------*/
 
 
@@ -1051,7 +1182,27 @@ padding-bottom: 10px;
   color: #0d6efd;
 }
 
+@media (max-width: 768px) {
 
+
+  
+  .footer-logo {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+
+  .footer-p{
+
+    padding-right: 20px;
+  }
+
+  .footer-copyright{
+
+    text-align: center;
+  }
+
+ }
 
 
 
