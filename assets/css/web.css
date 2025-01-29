@@ -57,6 +57,20 @@
 
 }
 
+
+@media (max-width: 768px) { 
+
+
+
+    .hero-banner{
+
+      margin-top: 200px !important;
+    }
+
+ }
+
+
+
 .Client_logo{
 
     height: 20px !important;
