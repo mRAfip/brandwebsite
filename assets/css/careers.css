@@ -48,6 +48,16 @@
         width: 100%;
     }
 
+    .roles_btn{
+
+        margin-bottom: 100px;
+    }
+
+    .hero-text-content{
+
+        margin-bottom: 60px;
+        padding-top: 70px;
+    }
 
     .banner-img{
 
@@ -55,12 +65,13 @@
         height: 350px;
         object-fit: cover;
         border-radius: 20px;
+
     }
 
     .right-hero{
         background-color: #fff; 
-        height: 30vh;
-        margin-top: 200px;
+        height: auto;
+        margin-top: 300px;
     
     }
 }
@@ -96,6 +107,32 @@
 
    
     border-bottom: solid 1px #bbbbbb;
+}
+
+
+@media (max-width: 768px) { 
+
+
+
+
+    .border-left {
+
+        border: none !important;
+    
+    }
+    
+    .border-right {
+    
+       
+        border: none !important;
+    }
+    
+    .border-bottom {
+    
+       
+        border: none !important;
+    }
+
 }
 
 
